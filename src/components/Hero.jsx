@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -45,7 +46,16 @@ export default function Hero() {
               View Projects
             </a>
 
-           <a
+           {/* <a
+  href="/tushar_chourasiya_resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="border border-gray-500 hover:border-white px-6 py-3 rounded-lg transition"
+>
+  Resume
+</a> */}
+
+ <a
             href="/tushar_chourasiya_resume.pdf"
             className="border border-gray-600 px-6 py-3 rounded-lg hover:border-white transition flex items-center gap-2"
           >
