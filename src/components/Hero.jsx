@@ -5,8 +5,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
 
-      
-      <div className="absolute w-[500px] h-[500px] bg-purple-600 blur-[150px] opacity-20 top-20 left-1/2 -translate-x-1/2"></div>
+      {/* BACKGROUND GLOW */}
+      <div className="pointer-events-none absolute w-[500px] h-[500px] bg-purple-600 blur-[150px] opacity-20 top-20 left-1/2 -translate-x-1/2"></div>
 
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
@@ -17,7 +17,7 @@ export default function Hero() {
             initial={{ opacity:0, y:50 }}
             animate={{ opacity:1, y:0 }}
             transition={{ duration:0.8 }}
-            className="text-5xl md:text-6xl font-bold"
+            className="text-4xl md:text-6xl font-bold"
           >
             Hi, I'm <span className="text-purple-500">Tushar</span>
           </motion.h1>
@@ -37,8 +37,10 @@ export default function Hero() {
             initial={{ opacity:0 }}
             animate={{ opacity:1 }}
             transition={{ delay:0.6 }}
-            className="mt-8 flex gap-4"
+            className="mt-8 flex flex-wrap gap-4"
           >
+
+            {/* VIEW PROJECTS */}
             <a
               href="#projects"
               className="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-semibold transition"
@@ -46,22 +48,18 @@ export default function Hero() {
               View Projects
             </a>
 
-           {/* <a
-  href="/tushar_chourasiya_resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-gray-500 hover:border-white px-6 py-3 rounded-lg transition"
->
-  Resume
-</a> */}
+            {/* DOWNLOAD RESUME */}
+            <a
+              href="/tushar_chourasiya_resume.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-gray-600 px-6 py-3 rounded-lg hover:border-white transition flex items-center gap-2"
+            >
+              <Download size={18} />
+              Download Resume
+            </a>
 
- <a
-            href="/tushar_chourasiya_resume.pdf"
-            className="border border-gray-600 px-6 py-3 rounded-lg hover:border-white transition flex items-center gap-2"
-          >
-            <Download size={18} />
-            Download Resume
-          </a>
           </motion.div>
 
         </div>
@@ -74,23 +72,26 @@ export default function Hero() {
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="absolute inset-0 bg-purple-600 blur-2xl opacity-30 rounded-full"></div>
+
+            <div className="pointer-events-none absolute inset-0 bg-purple-600 blur-2xl opacity-30 rounded-full"></div>
 
             <img
               src="/profile.jpg"
               alt="Tushar"
-              className="relative w-82 h-60 md:w-80 md:h-80 object-cover rounded-full border-4 border-gray-700 shadow-xl"
+              className="relative w-60 h-60 md:w-80 md:h-80 object-cover rounded-full border-4 border-gray-700 shadow-xl"
             />
+
           </div>
         </motion.div>
 
       </div>
 
-     
+      {/* SCROLL INDICATOR */}
       <motion.div
         animate={{ y:[0,12,0] }}
         transition={{ repeat:Infinity, duration:1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500">
+        className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500"
+      >
         ↓ Scroll
       </motion.div>
 
