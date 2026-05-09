@@ -50,7 +50,7 @@ export default function Hero() {
 
             {/* DOWNLOAD RESUME */}
            <a
-  href="/tushar_chourasiya_resume.pdf"
+  href="/Tushar_Chourasiya_Resume.pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="border border-gray-600 px-6 py-3 rounded-lg hover:border-white transition flex items-center gap-2"
