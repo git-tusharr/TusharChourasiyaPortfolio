@@ -61,7 +61,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="/Tushar_Chourasiya_Resume.pdf"
+            href="/Tushar_Chourasiya_Java.pdf"
             className="border border-gray-600 px-6 py-3 rounded-lg hover:border-white transition flex items-center gap-2"
           >
             <Download size={18} />
